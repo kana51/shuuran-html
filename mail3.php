@@ -9,23 +9,23 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 
-if(isset($_POST['naiyou'])) $naiyou = htmlspecialchars($_POST['naiyou']);
-if(isset($_POST['name'])) $name = htmlspecialchars($_POST['name']);
-if(isset($_POST['hira'])) $hira = htmlspecialchars($_POST['hira']);
-if(isset($_POST['zip11'])) $zip11 = htmlspecialchars($_POST['zip11']);
-if(isset($_POST['addr11'])) $addr11 = htmlspecialchars($_POST['addr11']);
-if(isset($_POST['tel'])) $tel = htmlspecialchars($_POST['tel']);
-if(isset($_POST['fax'])) $fax = htmlspecialchars($_POST['fax']);
-if(isset($_POST['email'])) $email = htmlspecialchars($_POST['email']);
-if(isset($_POST['select'])) $select = htmlspecialchars($_POST['select']);
-if(isset($_POST['request'])) $request= htmlspecialchars($_POST['request']);
+$name = isset($_POST["name"])? $_POST["name"]: "";
+$hira = isset($_POST["hira"])? $_POST["hira"]: "";
+$zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
+$addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
+$tel = isset($_POST["tel"])? $_POST["tel"]: "";
+$fax = isset($_POST["fax"])? $_POST["fax"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
+$item = isset($_POST["item"])? $_POST["item"]: "";
+$select = isset($_POST["select"])? $_POST["select"]: "";
+$request = isset($_POST["request"])? $_POST["request"]: "";
 
 
 
 //社内用メール設定
 $body1 = <<<EOT
 ご担当者様
-お客様より以下内容で、書道教室のお問い合わせがありました。
+お客様より以下内容で、お問い合わせがありました。
 ご対応のほどよろしくお願いいたします。
 
 
@@ -71,12 +71,10 @@ EOT;
 
 
 
-// //送信元設定（ITJ）
-$itj_email = "kana.51.tachi@gmail.com";
-$itj_password = "H8Sgi2LS";
+// //送信元設定（舟蘭）
+$itj_email = "shuuran.info@gmail.com";
+$itj_password = "koufuukai2015";
 $itj_name = "舟蘭";
-// $mail->setFrom('@gmail.com', '舟蘭');
-// $mail->addReplyTo('@gmail.com', '舟蘭');
 
 
 //社内(info)/////////////////////////////////////////////////////////////////

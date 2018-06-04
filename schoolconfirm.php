@@ -10,7 +10,7 @@ $email = isset($_POST["email"])? $_POST["email"]: "";
 $class = isset($_POST["class"])? $_POST["class"]: "";
 $date = isset($_POST["date"])? $_POST["date"]: "";
 $keikenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
-if(isset($_POST['riyu'])) $riyu=$_POST['riyu'];
+$riyu = isset($_POST["riyu"])? $_POST["riyu"]: "";
 $request = isset($_POST["request"])? $_POST["request"]: "";
 //画面表示
 
@@ -178,12 +178,12 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <dt>習ったことのある書体</dt>
             <dd>
               <?php
-
-          		foreach($riyu as $row){
-          			echo "<input type='hidden' name='riyu[]' value=".$row.">";
-          			echo $row . "  ";
-          		}
-
+              if($riyu!=""){
+                foreach($riyu as $row){
+                  echo "<input type='hidden' name='riyu[]' value=".$row.">";
+                  echo $row . "  ";
+                }
+              }
                 ?>
             </dd>
 

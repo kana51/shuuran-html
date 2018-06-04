@@ -191,7 +191,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <!-- 要望・質問 -->
             <dt>ご質問・ご相談</dt>
             <dd>
-              <textarea name="request" placeholder="ご質問、ご不明点等ありましたらご記入ください。" required><?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8"); ?></textarea>
+              <textarea name="request" placeholder="ご質問、ご不明点等ありましたらご記入ください。"><?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8"); ?></textarea>
             </dd>
           </dl>
           <input type="submit" name="next_btn" value="Submit" class="submit">

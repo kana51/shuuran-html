@@ -152,7 +152,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
 
 
             <!-- 要望・質問 -->
-            <dt>お問い合わせ内容</dt>
+            <dt>お問い合わせ内容<span class="mod-icon-inquiry">必須</span></dt>
             <dd>
               <textarea name="request" placeholder="お問い合わせ内容をご記入ください。" required><?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8"); ?></textarea>
             </dd>

@@ -1,6 +1,5 @@
 <?php
 
-
 //mailer利用
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -9,24 +8,25 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 
-if(isset($_POST['naiyou'])) $naiyou = htmlspecialchars($_POST['naiyou']);
-if(isset($_POST['name'])) $name = htmlspecialchars($_POST['name']);
-if(isset($_POST['hira'])) $hira = htmlspecialchars($_POST['hira']);
-if(isset($_POST['zip11'])) $zip11 = htmlspecialchars($_POST['zip11']);
-if(isset($_POST['addr11'])) $addr11 = htmlspecialchars($_POST['addr11']);
-if(isset($_POST['tel'])) $tel = htmlspecialchars($_POST['tel']);
-if(isset($_POST['fax'])) $fax = htmlspecialchars($_POST['fax']);
-if(isset($_POST['email'])) $email = htmlspecialchars($_POST['email']);
-if(isset($_POST['class'])) $class = htmlspecialchars($_POST['class']);
-if(isset($_POST['date'])) $date = htmlspecialchars($_POST['date']);
-if(isset($_POST['keikenn'])) $keikenn = htmlspecialchars($_POST['keikenn']);
-if(isset($_POST['riyu'])) $riyu=$_POST['riyu'];
+$name = isset($_POST["name"])? $_POST["name"]: "";
+$hira = isset($_POST["hira"])? $_POST["hira"]: "";
+$zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
+$addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
+$tel = isset($_POST["tel"])? $_POST["tel"]: "";
+$fax = isset($_POST["fax"])? $_POST["fax"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
+$class = isset($_POST["class"])? $_POST["class"]: "";
+$date = isset($_POST["date"])? $_POST["date"]: "";
+$keikenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
+$riyu = isset($_POST["riyu"])? $_POST["riyu"]: "";
   $result = "";
-  foreach($riyu as $row){
-  	$result .= $row."  ";
+  if($riyu!=""){
+    foreach($riyu as $row){
+    	$result .= $row."  ";
+    }
   }
 
-if(isset($_POST['request'])) $request= htmlspecialchars($_POST['request']);
+$request = isset($_POST["request"])? $_POST["request"]: "";
 
 
 //社内用メール設定
@@ -84,12 +84,10 @@ EOT;
 
 
 
-// //送信元設定（ITJ）
-$itj_email = "kana.51.tachi@gmail.com";
-$itj_password = "H8Sgi2LS";
+// //送信元設定（舟蘭）
+$itj_email = "shuuran.info@gmail.com";
+$itj_password = "koufuukai2015";
 $itj_name = "舟蘭";
-// $mail->setFrom('@gmail.com', '舟蘭');
-// $mail->addReplyTo('@gmail.com', '舟蘭');
 
 
 //社内(info)/////////////////////////////////////////////////////////////////
@@ -112,7 +110,7 @@ $mail->addReplyTo($itj_email, $itj_name);
 //送信先
 $to = $itj_email;
 $toName = $itj_name;
-$subject = "お問い合わせがありました";
+$subject = "書道教室のお問い合わせがありました";
 $mail->addAddress($itj_email, $itj_name);
 $mail->Subject = $subject;
 $mail->Body = $body1;

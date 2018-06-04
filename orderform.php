@@ -190,7 +190,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             </dd>
 
             <!-- 用途 -->
-            <dt>ご用途</dt>
+            <dt>ご用途<span class="mod-icon-inquiry">必須</span></dt>
             <dd>
               <input type="text" name="use" value="<?php echo htmlspecialchars($use, ENT_QUOTES, "utf-8"); ?>" id="input-font" required>
             </dd>
