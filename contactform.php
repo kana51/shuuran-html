@@ -21,6 +21,8 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="書道家「舟蘭」のサイトです。5歳より書道を始め、2016年より活動開始。東京都内で書道教室やワークショップの開講、デザイン書道やロゴなど筆文字の販売をしています。">
+  <meta name="keywords" content="書道,書道家,毛筆,硬筆,ペン字,筆文字,デザイン書道,習字,書道教室,ワークショップ,習い事,少人数,書作品,ギフト,プレゼント,企業,インテリア,大人,東京,板橋区,新宿区">
   <title>その他お問い合わせ | Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
