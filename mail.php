@@ -94,9 +94,9 @@ EOT;
 
 
 // //送信元設定（舟蘭）
-$itj_email = "shuuran.info@gmail.com";
-$itj_password = "koufuukai2015";
-$itj_name = "舟蘭";
+$itj_email = "";
+$itj_password = "";
+$itj_name = "";
 
 
 //社内(info)/////////////////////////////////////////////////////////////////
